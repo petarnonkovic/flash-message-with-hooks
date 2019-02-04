@@ -1,0 +1,82 @@
+:root {
+  --success-alert: rgba(55, 233, 85, 0.5);
+  --success-alert-text: rgb(12, 61, 16);
+  --error-alert: rgba(179, 42, 42, 0.5);
+  --error-alert-text: rgb(124, 13, 13);
+  --bg-light-blue: rgb(27, 122, 231);
+  --bg-white: rgb(255, 255, 255);
+  --bg-whitesmoke: rgb(210, 210, 210);
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.navLink {
+  padding: 10px;
+}
+
+.Messages .wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 2;
+    padding: 20px;
+
+    .alert {
+      border-radius: 6px;
+    }
+  }
+
+  .sidebar {
+    display: flex;
+    align-self: flex-start;
+    flex-flow: column nowrap;
+    flex: 0 1 200px;
+    background-color: var(--bg-light-blue);
+    padding: 3rem 1rem;
+
+    button {
+      margin-top: 10px;
+      color: var(--bg-light-blue);
+      background-color: var(--bg-white);
+      border: 0;
+      border-radius: 4px;
+      padding: 0.6rem;
+      transition: all 400ms ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--bg-whitesmoke);
+      }
+    }
+  }
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 0.5rem;
+  position: relative;
+
+  &.alert-error {
+    background-color: var(--error-alert);
+    color: var(--error-alert-text);
+  }
+
+  &.alert-success {
+    background-color: var(--success-alert);
+    color: var(--success-alert-text);
+  }
+
+  & > p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    text-align: center;
+    font-weight: 500;
+  }
+}
